@@ -1,0 +1,301 @@
+/*
+ * @FilePath: \vue3-element\style\headmark.css
+ */
+
+/* -------------------------登录-注册------------------------- */
+
+/* 设置背景图片，固定背景，不重复，覆盖整个容器，最小高度为视口高度 */
+#background-cont {
+  background-image: url(../static/beijing.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* 设置内容的绝对定位，使其位于容器的中心 */
+.meituan-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 设置登录容器的宽度、高度、背景色和边框圆角 */
+.login-cont {
+  width: 500px;
+  height: 300px;
+  background: #f9de80;
+  border-radius: 5px;
+}
+
+/* 设置标题的文本居中、颜色、字体大小、上内边距和字体 */
+.meituan-title {
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+  padding-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 设置用户的宽度、自动外边距、上内边距、高度、显示方式和项目对齐方式 */
+.meituan-user {
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* 设置用户段落的宽度、颜色和字体大小 */
+.meituan-user p {
+  width: 50px;
+  color: #000000;
+  font-size: 16px;
+}
+
+/* 设置输入框的弹性 */
+.inptflex {
+  flex: 1;
+}
+
+/* 设置注册视图的宽度、显示方式、内容对齐方式、自动外边距和上内边距 */
+.reg-view {
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+/* 设置注册视图段落的光标样式和显示内容 */
+.reg-view p {
+  cursor: pointer;
+  display: contents;
+}
+
+/* 设置按钮的宽度、显示方式、项目对齐方式、内容对齐方式、外边距和字体大小 */
+.meituan-btn {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 0 auto;
+  font-size: 16px;
+}
+
+/* -------------------------侧边菜单栏------------------------- */
+
+/* 设置顶部侧边栏的宽度、背景色、高度、颜色、显示方式、内容对齐方式、项目对齐方式、固定定位、顶部、左边、右边和z-index */
+.sidebar-top {
+  width: 100%;
+  background: #ffffff;
+  height: 50px;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+/* 设置顶部侧边栏第一个子元素的左内边距和字体大小 */
+.sidebar-top div:nth-child(1) {
+  padding-left: 22px;
+  font-size: 18px;
+}
+
+/* 设置顶部侧边栏第二个子元素的右内边距和光标样式 */
+.sidebar-top div:nth-child(2) {
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+/* 设置侧边栏内容的固定定位、顶部、左边、底部、背景色、宽度、高度、颜色、字体大小和溢出方式 */
+.sidebar-cont {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 50px;
+  background: #ffffff;
+  width: 200px;
+  height: 100vh;
+  color: #000000 !important;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+/* -------------------------主页定位------------------------- */
+
+/* 设置订餐的绝对定位和顶部 */
+.ordering {
+  position: absolute;
+  top: 50px;
+}
+
+/* 设置标题的字体大小、字体粗细和下外边距 */
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* -------------------------分页------------------------- */
+
+/* 设置分页的文本居中和外边距 */
+.el-pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* -------------------------查询组件，flex------------------------- */
+
+/* 设置查询视图的显示方式、项目对齐方式、下外边距和弹性换行 */
+.query-view {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* 设置报价查询的显示方式、项目对齐方式和右外边距 */
+.quotation-query {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+/* 设置报价标题的显示方式 */
+.quotation-title {
+  display: flex;
+}
+
+/* 设置菜单间距的外边距 */
+.memu-margin {
+  margin: 20px 0;
+}
+
+/* 设置菜单跨度的字体粗细、字体大小和上内边距 */
+.menu-span {
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+/* -------------------------菜品管理：添加菜品------------------------- */
+
+/* 设置按钮视图的显示方式、内容对齐方式和下外边距 */
+.botton-view {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+/* -------------------------upload上传界面------------------------- */
+
+/* 设置内容视图十的上外边距、背景色和内边距 */
+.content-view-ten {
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/* 设置图片视图标题的最大宽度、自动外边距和下外边距 */
+.image-view-title {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+/* 设置图片列表的下外边距 */
+.image-list {
+  margin-bottom: 20px;
+}
+
+/* 设置提交按钮的文本居中和外边距 */
+.sub-button {
+  text-align: center;
+  margin: 120px 0;
+}
+
+/* -------------------------没有数据的展示------------------------- */
+
+/* 设置没有数据的文本居中、颜色和上内边距 */
+.nodatas {
+  text-align: center;
+  color: #999;
+  padding-top: 200px;
+}
+
+/* -------------------------全局响应式------------------------- */
+
+/* 设置订餐的最大宽度, 大于1700 */
+@media screen and (min-width: 1700px) {
+  .ordering {
+    max-width: 1400px;
+  }
+}
+
+/* 设置订餐的最大宽度, 小于1700 */
+@media screen and (max-width: 1700px) {
+  .ordering {
+    max-width: 1300px;
+  }
+}
+
+/* 设置订餐的最大宽度 */
+@media screen and (max-width: 1650px) {
+  .ordering {
+    max-width: 1200px;
+  }
+}
+
+/* 设置订餐的最大宽度 */
+@media screen and (max-width: 1550px) {
+  .ordering {
+    max-width: 1100px;
+  }
+}
+
+/* 设置订餐的最大宽度 */
+@media screen and (max-width: 1430px) {
+  .ordering {
+    max-width: 1000px;
+  }
+}
+
+/* 设置订餐的最大宽度 */
+@media screen and (max-width: 1300px) {
+  .ordering {
+    max-width: 900px;
+  }
+}
+
+/* 设置订餐的最大宽度 */
+@media screen and (max-width: 1200px) {
+  .ordering {
+    max-width: 850px;
+  }
+}
+
+/* 设置订餐的最大宽度 */
+@media screen and (max-width: 1130px) {
+  .ordering {
+    max-width: 800px;
+  }
+}
+
+/* -------------------------菜品界面的编辑和下架按钮------------------------- */
+
+/* 设置修改按钮和下架按钮的左外边距和上外边距 */
+@media screen and (max-width: 1200px) {
+  .modify-button .el-button + .el-button {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
