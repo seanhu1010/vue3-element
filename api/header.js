@@ -31,8 +31,8 @@ let instance = axios.create({
 // 对token加密
 function baseFun() {
   const token = localStorage.getItem('token') // 从本地缓存里取出token
-  const base64 = Base64.encode(token + ':') // 对token加密
-  return 'Basic ' + base64
+  // const base64 = Base64.encode(token + ':') // 对token加密
+  return 'Bearer ' + token
 }
 
 // http拦截请求，在axios请求发出之前给每一个接口携带token去后端检验身份
@@ -70,7 +70,7 @@ instance.interceptors.response.use(
           break
         case 401:
           // 没有访问权限，token过期，没有携带token请求，token错误
-          ElMessageBox.alert(MSG, '提示', {
+          ElMessageBox.alert(error.response.data.detail, '提示', {
             confirmButtonText: '好的',
             type: 'warning',
           })

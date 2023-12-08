@@ -12,6 +12,13 @@ const routes = [
     // webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中
     component: () => import(/*webpackChunkName: "Login"*/ '@/page/login/login.vue'), //路由懒加载模式
   },
+  {
+    // 主界面
+    path: '/index',
+    name: 'index',
+    // webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中
+    component: () => import(/*webpackChunkName: "Index"*/ '@/page/index/index.vue'), //路由懒加载模式
+  },
 ]
 
 // 创建路由实例并传递 `routes` 配置

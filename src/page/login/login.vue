@@ -55,6 +55,8 @@
           const res = await new Request(urls.m().login, obj).post()
           // console.log(urls.m().login, obj)
           // console.log(res)
+          localStorage.setItem('token', res.token)
+          localStorage.setItem('username', user.username)
           tips(res.msg, 'success')
         } catch (error) {
           console.error('Login request failed:', error)
