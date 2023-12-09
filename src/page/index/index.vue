@@ -10,7 +10,7 @@
     </div>
     <!-- 使用element-puls侧边栏 -->
     <div class="sidebar-cont">
-      <el-menu :default-active=active_index @select="Select">
+      <el-menu :default-active="active_index" @select="Select">
         <div v-for="(item, index) in menu" :key="index">
           <el-menu-item v-if="item.Subclass.length == 0" :index="item.id">
             <template #title>
@@ -33,6 +33,7 @@
       </el-menu>
     </div>
   </div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -57,42 +58,50 @@
         {
           id: '2',
           icon: UserFilled,
-          title: '用户管理',
+          title: '用户列表',
           router: '',
           Subclass: [],
         },
+        // 订单管理
         {
           id: '3',
           icon: CreditCard,
-          title: '财务管理',
+          title: '订单管理',
           router: '',
           Subclass: [],
         },
         {
           id: '4',
           icon: Food,
-          title: '餐饮管理',
+          title: '菜品管理',
+          router: '',
+          Subclass: [],
+        },
+        // 员工管理
+        {
+          id: '5',
+          icon: UserFilled,
+          title: '员工管理',
           router: '',
           Subclass: [
+            //员工详情
             {
-              id: '4-1',
-              icon: '',
-              title: '菜品管理',
+              id: '5-1',
+              title: '员工详情',
               router: '',
-              Subclass: [],
             },
+            //其他页面
             {
-              id: '4-2',
-              icon: '',
-              title: '订单管理',
+              id: '5-2',
+              title: '其他页面',
               router: '',
-              Subclass: [],
             },
           ],
         },
       ]
-      const active_index = ref('1')
+
       // 菜单激活回调
+      const active_index = ref('1')
       function Select(index, path) {
         localStorage.setItem('menuid', JSON.stringify(index))
       }
