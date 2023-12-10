@@ -12,10 +12,13 @@ const urls = class {
     const register = `${url}/user/register/`
     // 登录接口
     const login = `${url}/user/login/`
+    // 用户列表
+    const userList = `${url}/user/`
 
     return {
       register,
       login,
+      userList
     }
   }
 }

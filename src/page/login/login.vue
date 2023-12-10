@@ -31,6 +31,7 @@
 
 <script>
   import { inject, reactive, toRefs } from 'vue'
+  import { useRouter } from 'vue-router'
   import tips from '/config/tips'
   export default {
     setup() {
@@ -40,8 +41,13 @@
         regi: '注册',
         loading: false, // 登录按钮的 loading 状态
       })
+
+      // 使用 inject 函数获取的全局注入的对象，包含了后端接口的地址和封装的请求方法
       const urls = inject('$urls')
       const Request = inject('$Request')
+
+      // 使用 useRouter 函数获取路由实例
+      const router = useRouter()
 
       // 登录
       const signin = async () => {
@@ -57,7 +63,9 @@
           // console.log(res)
           localStorage.setItem('token', res.token)
           localStorage.setItem('username', user.username)
-          tips(res.msg, 'success')
+          // tips(res.msg, 'success')
+          // 使用router跳转到index页面
+          router.push({ name: 'index' })
         } catch (error) {
           console.error('Login request failed:', error)
         }

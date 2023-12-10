@@ -76,11 +76,13 @@ instance.interceptors.response.use(
           })
             .then(() => {
               // 跳转到登录界面
-              window.location.href = '/login'
+              localStorage.removeItem('token')
+              window.location.href = '/'
             })
             .catch(() => {
               // 用户点击取消的处理逻辑
-              window.location.href = '/login'
+              localStorage.removeItem('token')
+              window.location.href = '/'
             })
           break
         default:
@@ -91,11 +93,11 @@ instance.interceptors.response.use(
           })
             .then(() => {
               // 跳转到登录界面
-              window.location.href = '/login'
+              window.location.href = '/'
             })
             .catch(() => {
               // 用户点击取消的处理逻辑
-              window.location.href = '/login'
+              window.location.href = '/'
             })
       }
     }
