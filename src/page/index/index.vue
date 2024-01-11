@@ -12,23 +12,29 @@
     <div class="sidebar-cont">
       <el-menu :default-active="active_index" @select="Select">
         <div v-for="(item, index) in menu" :key="index">
-          <el-menu-item v-if="item.Subclass.length == 0" :index="item.id">
-            <template #title>
-              <el-icon><component :is="item.icon" /></el-icon>
-              <span>{{ item.title }}</span>
-            </template>
-          </el-menu-item>
-          <el-sub-menu v-else :index="item.id">
-            <!-- 一级菜单 -->
-            <template #title>
-              <el-icon><component :is="item.icon" /></el-icon>
-              <span>{{ item.title }}</span>
-            </template>
-            <!-- 二级菜单 -->
-            <div v-for="(subitem, subindex) in item.Subclass" :key="subindex">
-              <el-menu-item :index="subitem.id">{{ subitem.title }}</el-menu-item>
-            </div>
-          </el-sub-menu>
+          <router-link :to="{ path: item.router }">
+            <el-menu-item v-if="item.Subclass.length == 0" :index="item.id">
+              <!-- 一级菜单 -->
+              <template #title>
+                <el-icon><component :is="item.icon" /></el-icon>
+                <span>{{ item.title }}</span>
+              </template>
+            </el-menu-item>
+
+            <el-sub-menu v-else :index="item.id">
+              <!-- 一级菜单 -->
+              <template #title>
+                <el-icon><component :is="item.icon" /></el-icon>
+                <span>{{ item.title }}</span>
+              </template>
+              <!-- 二级菜单 -->
+              <div v-for="(subitem, subindex) in item.Subclass" :key="subindex">
+                <router-link :to="{ path: subitem.router }">
+                  <el-menu-item :index="subitem.id">{{ subitem.title }}</el-menu-item>
+                </router-link>
+              </div>
+            </el-sub-menu>
+          </router-link>
         </div>
       </el-menu>
     </div>
@@ -52,14 +58,14 @@
           id: '1',
           icon: DataAnalysis,
           title: '数据分析',
-          router: '',
+          router: 'data-analysis',
           Subclass: [],
         },
         {
           id: '2',
           icon: UserFilled,
           title: '用户列表',
-          router: '',
+          router: 'user-page',
           Subclass: [],
         },
         // 订单管理
@@ -67,14 +73,14 @@
           id: '3',
           icon: CreditCard,
           title: '订单管理',
-          router: '',
+          router: 'order',
           Subclass: [],
         },
         {
           id: '4',
           icon: Food,
           title: '菜品管理',
-          router: '',
+          router: 'dishes',
           Subclass: [],
         },
         // 员工管理
@@ -82,19 +88,19 @@
           id: '5',
           icon: UserFilled,
           title: '员工管理',
-          router: '',
+          router: 'role-manage',
           Subclass: [
             //员工详情
             {
               id: '5-1',
               title: '员工详情',
-              router: '',
+              router: 'role-list',
             },
             //其他页面
             {
               id: '5-2',
               title: '其他页面',
-              router: '',
+              router: 'role-power',
             },
           ],
         },

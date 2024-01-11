@@ -178,11 +178,23 @@
 
 /* 设置报价标题的显示方式 */
 .quotation-title {
+  margin-right: 10px;
+}
+
+/* -------------------------订单页面的弹窗------------------------- */
+.menu-padd {
+  border-bottom: 1px solid #f8f8f8;
+}
+
+.menu-detail {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 
 /* 设置菜单间距的外边距 */
-.memu-margin {
+.menu-margin {
   margin: 20px 0;
 }
 

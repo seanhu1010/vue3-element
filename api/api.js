@@ -14,11 +14,17 @@ const urls = class {
     const login = `${url}/user/login/`
     // 用户列表
     const userList = `${url}/user/`
+    // 订单管理
+    const orderList = `${url}/order/`
+    // 桌号数据
+    const tableList = `${url}/table/`
 
     return {
       register,
       login,
-      userList
+      userList,
+      orderList,
+      tableList,
     }
   }
 }
