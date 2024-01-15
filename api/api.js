@@ -18,6 +18,14 @@ const urls = class {
     const orderList = `${url}/order/`
     // 桌号数据
     const tableList = `${url}/table/`
+    // 菜品管理
+    const dishList = `${url}/dish/`
+    // 菜品类目
+    const categoryList = `${url}/dish-category/`
+    // 菜品单位
+    const unitList = `${url}/dish-unit/`
+    // 菜品图片上传
+    const dishImageUpload = `${url}/dish-image/`
 
     return {
       register,
@@ -25,6 +33,10 @@ const urls = class {
       userList,
       orderList,
       tableList,
+      dishList,
+      categoryList,
+      unitList,
+      dishImageUpload,
     }
   }
 }

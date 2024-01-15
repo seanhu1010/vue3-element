@@ -46,6 +46,12 @@ const routes = [
         name: 'dishes',
         component: () => import(/*webpackChunkName: "Dishes"*/ '@/page/dishes/dishes.vue'),
       },
+      // 菜品管理:上传菜品 page\dishes-upload\upload.vue
+      {
+        path: '/dishes-upload',
+        name: 'dishes-upload',
+        component: () => import(/*webpackChunkName: "DishesUpload"*/ '@/page/dishes-upload/upload.vue'),
+      },
       // 员工管理\page\role-manage\role.vue
       {
         path: '/role-manage',

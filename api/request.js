@@ -31,6 +31,18 @@ class Request {
     }
   }
 
+  // 发送 PUT 请求
+  async put() {
+    try {
+      const response = await instance.put(this.url, this.data)
+      return response.data
+    } catch (error) {
+      // 可以根据实际需求进行错误处理
+      console.error('PUT request error:', error)
+      throw error
+    }
+  }
+
   // 发送 GET 请求
   async get() {
     try {
