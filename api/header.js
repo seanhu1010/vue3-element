@@ -70,7 +70,7 @@ instance.interceptors.response.use(
           break
         case 401:
           // 没有访问权限，token过期，没有携带token请求，token错误
-          ElMessageBox.alert(error.response.data.detail, '提示', {
+          ElMessageBox.alert(MSG, '提示', {
             confirmButtonText: '好的',
             type: 'warning',
           })
@@ -84,6 +84,10 @@ instance.interceptors.response.use(
               localStorage.removeItem('token')
               window.location.href = '/'
             })
+          break
+        case 404:
+          // 服务器未找到请求的资源，或服务器无法处理请求
+          tips(MSG, 'warning')
           break
         default:
           // 处理其他未知错误

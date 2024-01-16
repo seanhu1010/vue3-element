@@ -88,19 +88,19 @@
           id: '5',
           icon: UserFilled,
           title: '员工管理',
-          router: 'role-manage',
+          router: '',
           Subclass: [
             //员工详情
             {
               id: '5-1',
               title: '员工详情',
-              router: 'role-list',
+              router: 'role',
             },
             //其他页面
             {
               id: '5-2',
               title: '其他页面',
-              router: 'role-power',
+              router: '',
             },
           ],
         },

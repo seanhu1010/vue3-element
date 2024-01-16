@@ -26,6 +26,10 @@ const urls = class {
     const unitList = `${url}/dish-unit/`
     // 菜品图片上传
     const dishImageUpload = `${url}/dish-image/`
+    // 员工列表
+    const employeeList = `${url}/employees/`
+    // 批量删除员工
+    const employeeDelete = `${url}/employees/delete-multiple/`
 
     return {
       register,
@@ -37,6 +41,8 @@ const urls = class {
       categoryList,
       unitList,
       dishImageUpload,
+      employeeList,
+      employeeDelete,
     }
   }
 }

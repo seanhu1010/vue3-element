@@ -52,25 +52,11 @@ const routes = [
         name: 'dishes-upload',
         component: () => import(/*webpackChunkName: "DishesUpload"*/ '@/page/dishes-upload/upload.vue'),
       },
-      // 员工管理\page\role-manage\role.vue
+      // 员工详情\page\role-manage\role.vue
       {
-        path: '/role-manage',
-        name: 'role-manage',
+        path: '/role',
+        name: 'role',
         component: () => import(/*webpackChunkName: "RoleManage"*/ '@/page/role-manage/role.vue'),
-        children: [
-          {
-            // 角色列表\page\role-manage\role-list.vue
-            path: '/role-list',
-            name: 'role-list',
-            component: () => import(/*webpackChunkName: "RoleList"*/ '@/page/role-manage/role-list.vue'),
-          },
-          {
-            // 角色权限\page\role-manage\role-power.vue
-            path: '/role-power',
-            name: 'role-power',
-            component: () => import(/*webpackChunkName: "RolePower"*/ '@/page/role-manage/role-power.vue'),
-          },
-        ]
       },
     ],
   },
