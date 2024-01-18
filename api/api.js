@@ -30,6 +30,12 @@ const urls = class {
     const employeeList = `${url}/employees/`
     // 批量删除员工
     const employeeDelete = `${url}/employees/delete-multiple/`
+    // 菜品销量排行榜
+    const dishSalesRank = `${url}/dish/sales-rank/`
+    // 订单销售总价区间统计
+    const orderStatistics = `${url}/order/total-amount-statistics/`
+    // 菜品按分类销量统计
+    const dishCategorySalesRank = `${url}/dish-category/sales-rank/`
 
     return {
       register,
@@ -43,6 +49,9 @@ const urls = class {
       dishImageUpload,
       employeeList,
       employeeDelete,
+      dishSalesRank,
+      orderStatistics,
+      dishCategorySalesRank,
     }
   }
 }

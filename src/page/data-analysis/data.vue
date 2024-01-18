@@ -2,11 +2,25 @@
  * @FilePath: \vue3-element\src\page\data-analysis\data.vue
 -->
 <template>
-  <div>111</div>
+  <div class="ordering">
+    <div class="heading">数据分析</div>
+    <div>
+      <First />
+      <Second />
+    </div>
+  </div>
 </template>
 
 <script>
-  export default {}
+  import First from './component/first-floor.vue'
+  import Second from './component/second-floor.vue'
+  export default {
+    components: {
+      First,
+      Second,
+    },
+    setup() {},
+  }
 </script>
 
 <style></style>
